@@ -1,0 +1,49 @@
+<div class="container">
+<h2>My First Directive</h2>
+    <directive-example  person="user1" collapsed= "true"></directive-example>
+    <directive-example  person="user2" collapsed= "true"></directive-example>
+    <h2>Watch Example</h2>
+    <div font-scale="size"><p>I am some text.</p></div>
+    <input type="text" ng-model="size"/>
+    <display-box>
+    <div> Transclusion Example</div>
+        <ul>
+            <li>Content 1</li>
+            <li>Content 2</li>
+            <li>Content 3</li>
+            <li>Content 4</li>
+        </ul>
+    </display-box>
+    <my-question q="What is your name??">
+        <input type="text">
+    
+    </my-question> 
+    <table-content>
+        <tr ng-repeat="table in tableList">
+            <td>{{table.friends}} </td>  
+            <td>{{table.family}} </td> 
+            <td>{{table.colleagues}} </td>  
+            <td>{{table.teachers}} </td>  
+        </tr>
+    </table-content>
+    <sw-tabstrip>
+        <sw-pane title="Bounty Hunters">
+        <h4>I don't know what Bounty Hunters are </h4>
+        </sw-pane>
+        <sw-pane title="Death Stars">
+        <h4> Seems like stars are dead</h4>
+        </sw-pane>
+        <sw-pane title="I love you">
+        <h4> I am so in love. And I am happy about it </h4>
+        </sw-pane>
+        
+    </sw-tabstrip>
+    <div class="row">
+    <div class ="col 8">
+        <master-user data='users' selected-user ="selectedUser"></master-user>
+        </div>
+        <div class="col 4">
+        <detail-user data='users' selected-user = "selectedUser"></detail-user>        
+        </div>
+    </div>
+</div>

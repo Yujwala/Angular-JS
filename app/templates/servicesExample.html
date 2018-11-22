@@ -1,0 +1,30 @@
+<div class="container">
+<h2>My First Service</h2>
+    <h3 style="color: white">Books Log</h3>
+    <ul>
+    <li style="color: white" ng-repeat="book in allbooks">
+        {{book.name}} - {{book.author}}<br>
+        Price: {{book.price | currency}} 
+        </li>
+    </ul>
+    <input type="text" ng-model="number"><br>
+    <button type="button" ng-click="doSquare()">Square</button><br>
+    <p>{{error}}</p>
+    <p>Answer: {{answer}} </p>
+    
+    <h3 style="color: white">Currency Filter</h3>
+    <p>Enter the Amount:</p> <input type="text" ng-model="amount"><br>
+    <p>Select 'From' Currency:</p> <select ng-model="from"><option ng-repeat="fromlistitems in fromList" value={{fromlistitems.code}}>{{fromlistitems.code}}</option><br><br>
+    </select>
+    <p>Select 'To' Currency:</p> <select ng-model="to" ><option ng-repeat="tolistitems in toList" value={{tolistitems.code}}>{{tolistitems.code}}</option>
+    </select><br><br>
+    <button type="button" ng-click="convert()">Convert</button>
+    <p>{{output}}</p>
+<h3>Details of Indian Family</h3>
+    <div class="well">
+    <label>First name:</label><span>{{fnm}}</span><br>
+    <label>Last name:</label><span>{{lnm}}</span><br>
+    <label>Employee-ID:</label><span>{{eid}}</span><br>
+    </div>
+</div>
+

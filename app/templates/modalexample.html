@@ -1,0 +1,112 @@
+<div>
+<h3>Modal Example</h3>
+<button class="btn btn-primary" ng-click="openModel()">Open Model</button>
+<modal-directive open="modalOpen" option="{top: 35 , height: 300}" on-close="modalClosed(response)">
+    <div class="panel panel-primary ">
+    <div class="panel-heading">Are you sure ??</div>
+    <div class="panel-body">
+        <button class="btn btn-success" ng-click="close('Yes')">Yes</button>
+        <button class="btn btn-warning" ng-click="close('No')">No</button>
+        </div>
+    
+    </div>
+    
+    </modal-directive>
+<h3>Ng-Dialogue Example</h3>
+    <p>Pop up dialogue using ng-dialogue</p>
+    <button class="btn btn-primary" style="text-align: right" ng-click="openDialogue()">Open Dialogue</button>
+    
+    <h3>Toggle Tab button example</h3>
+    <div class="toggleButtons clearfix">
+    <input type="button" class="togglebtn" name="options" ng-class="(isIndiaActive == true)? 'activeClass' : ''" value="India" ng-click="clickIndia()">
+    <input type="button" class="togglebtn" name="options" ng-class="(isUSActive == true)? 'activeClass' : ''" value="US" ng-click="clickUS()">
+    </div>
+    
+    <!---Start ofIndia--->
+    
+    <div ng-show="isIndiaActive">
+        <h4 style="color:white">INDIA</h4>
+        <div class="panel panel-primary">
+        <div class="panel-heading" ng-click="active =!active">Advantages of being in India</div>
+            <div class="panel-body" ng-hide="active">
+            <ul>
+            <li> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</li>
+            <li> 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.</li>
+            <li> Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird</li>
+            </ul>
+            </div>
+        </div>
+        <button class="btn btn-primary" ng-click="addIndFamily()">Add Family</button>
+        <br>
+        <div ng-show="isAddIndFamily" class="familydetails container clearfix">            
+        <form name="myForm" novalidate> 
+        <div class="row">
+        <div class="col-lg-2">
+        <label>First Name :*</label>
+        </div>
+     <div class="col-lg-4">
+        <input type="text" name="firstname" ng-model="fnm" placeholder="Your first name.." required>
+         <p style="color: red;" ng-if="errmsg1">Firstname is mandatory</p>
+       </div>
+
+      <div class="col-lg-2">
+        <label>Last Name : *</label>
+      </div>
+     <div class="col-lg-4">
+        <input type="text" name="lastname" ng-model="lnm" placeholder="Your last name.." required>
+        <p style="color: red;" ng-if="errmsg2">Lastname is mandatory</p>
+     </div>
+  </div>
+
+     <div class="row">
+      <div class="col-lg-2">
+        <label>Employee-ID : *</label>
+      </div>
+     <div class="col-lg-4">
+        <input type="text"  name="eid" ng-model="eid" placeholder="Your E-ID.." required>
+        <p style="color: red;" ng-if="errmsg3">EID is mandatory</p>
+     </div>
+
+      <div class="col-lg-2">
+        <label>DOJ :</label>
+      </div>
+     <div class="col-lg-4">
+        <input type="text" name="doj" placeholder="Date of joining..">
+     </div>
+
+      <div class="text-right">
+      <input type="submit" value="Submit" class="btn btn-success" ng-click="formSubmit()">
+    </div>
+
+            </div>
+
+   </form>
+            </div>
+
+    
+    </div>
+    <!-----End of India---->
+    
+    <!------Start of US---->
+  
+    <div ng-if="isUSActive">
+          <h4 style="color:white">US</h4>
+        <div class="panel panel-primary">
+        <div class="panel-heading" ng-click="active =!active">Advantages of being in US</div>
+            <div class="panel-body" ng-hide="active">
+            <ul>
+            <li> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</li>
+            <li> 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.</li>
+            <li> Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird</li>
+            </ul>
+            </div>
+        </div>
+        <button class="btn btn-primary" ng-click="addUSFamily()">Add Family</button>
+        
+    </div>
+    <!-------------- End of US ----------------------------------->
+    
+    
+    
+    
+</div>

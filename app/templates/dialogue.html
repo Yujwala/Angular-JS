@@ -1,0 +1,30 @@
+<div class="form">
+<h4>My Form Details</h4> 
+<form name="MyForm" novalidate class="row myform">
+  <label class="col-lg-4">First Name<span style="color:red">*</span></label>
+    <div class="col-lg-8">
+    <input type="text" name="firstname" ng-model="iffirstname" required><br>
+        <p ng-show="first" style="color:red">Please Enter First Name</p>
+    </div>
+    <label for="lastname" class="col-lg-4">Last Name<span style="color:red">*</span></label>
+    <div class="col-lg-8">
+    <input type="text" id="lastname" name="lastname" ng-model="iflastname" required><br>
+    <p ng-show="last" style="color:red">Please Enter Last Name</p>
+    </div>
+    <label for="emailaddress" class="col-lg-4">Email Address<span style="color:red">*</span></label>
+    <div class="col-lg-8">
+    <input type="email" id="emailaddress" name="emailaddress" ng-model="ifemailaddress"><br>
+    <p ng-show="emailerror" style="color:red">Please Enter Email Address</p>
+    <p ng-show="invalidemail" style="color:red">Invalid Email Address</p>
+    </div>
+    <label for="contact" class="col-lg-4">Contact<span>(Optional)</span></label>
+    <div class="col-lg-8">
+    <input type="text" id="contact" ng-model="contact"><br>
+    </div>
+    <div class="text-right">
+    <button type="submit" class="btn btn-info" ng-click="submit()">Submit</button>
+    <button type="submit" class="btn btn-info" ng-disabled="buttonChecker();" ng-click="closeThisDialog(0)">Cancel</button>
+    </div>
+</form>
+    
+</div>

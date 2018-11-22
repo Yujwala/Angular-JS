@@ -1,0 +1,193 @@
+/* app css stylesheet */
+body{
+    background-color: #3a3f44;
+}
+h1, h2,h3{
+    color: blue;
+}
+p{
+    color: white;
+}
+.hoverwell:hover {
+  background-color: #52575c;
+  cursor: pointer;
+}
+select, textarea {
+  color: #52575c;
+}
+button{
+    color: black
+}
+
+.well-title {
+  margin-top: 0px;
+}
+.session {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.votingWidget {
+  height: 64px;
+  padding: 5px;
+}
+.votingButton {
+  padding-left:6px;
+  cursor:pointer;
+}
+
+.sessionThumbnail {
+    height:100%;
+    overflow: hidden;
+}
+
+.calendar{
+    border: 1px solid #555;
+    width: 238px;
+}
+.calendar .row {
+    margin-left: 0px;
+}
+.calendar .row div{
+    float:left;
+    padding:2px;
+    width:30px;
+    text-align:center;
+}
+.calendar-nav-left {
+    float:left;
+    width: 20px;
+    padding:2px;
+}
+.calendar-nav-right {
+    float:left;
+    width: 20px;
+    padding:2px;
+    text-align:right;
+}
+
+.calendar .row .calendar-hdr {
+    padding:2px;
+    float:left;
+    width: 166px;
+    text-align:center;
+}
+.pointer {
+    cursor: pointer;
+}
+.date-picker {
+    position: absolute;
+    top: -7px;
+    left: 209px;
+    background-color: #272b30;
+}
+table{
+    color: white;
+}
+ul.thumbnails{
+    color: white;
+}
+.modal-blackout{
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index:10;
+}
+.modal-container{
+    position: absolute;
+    padding: 20px;
+    box-shadow:0px 2px 7px #292929;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 20;
+}
+.modal-close{
+    display: block;
+    float: right;
+    padding:10px;
+    height: 50px;
+    color: red;
+    cursor: pointer;
+    
+}
+.modal-close:hover {
+    color: red;
+    text-decoration: none;
+
+}
+.form{
+    margin-right: 10px;
+}
+.form label{
+    color: #053d75;
+}
+.dispib{
+    display: inline-block;
+    position: absolute;
+}
+.clearfix{
+    clear: both;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*
+.formDetails{
+    width:100%;
+}*/
+.text-right:{
+    text-align: right;
+}
+.activeClass{
+    background-color: purple;
+    color: white;
+}
+.togglebtn{
+    margin-right: 0px;
+    float: left;
+    padding: 10px;
+    border: 0px;
+    border-radius: 4px
+    
+}
+.familydetails{
+    margin: 20px;
+}
+.active {
+    margin-right: 5px;
+}
+.liHeight{
+    height: 40px;
+}
+.edit{
+    background-color:blue;
+        border-radius: 2px;
+}
+.markAsC{
+    text-decoration: line-through;
+}
+.activeTask{
+    text-decoration: none;
+}
+.serviceList {
+   color:white; 
+   background-color: #e35885;
+   margin-bottom:10px;
+   padding:10px 30px;
+   list-style: none;
+   font-size: 18px;
+}
+.totalService{
+     list-style: none;
+     font-size: 18px;
+}
+ .Active{
+    background-color: #8ec16d
+}

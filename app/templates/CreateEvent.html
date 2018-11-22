@@ -1,0 +1,99 @@
+        <div>
+        <div class="container">
+            <h1>Create New Event</h1>
+            <hr>
+            <form name="newEventForm">
+            <fieldset>
+             <label for="eventName">Event Name</label>
+                <input type="text" id="eventName" ng-model=event.name required placeholder="Enter the event name"/>
+              <label for="eventDate">Event Date</label>
+                <input type="text" id="eventDate" ng-model=event.date ng-pattern="/\d\d/\d\d/\d\d\d\d/" required placeholder="Enter the event date"/>
+              <label for="eventTime">Event Time</label>
+                <input type="number" id="eventTime" ng-model=event.time required placeholder="Enter the event time"/>
+             </fieldset>
+                <br>
+                <h5>Your event name is: {{event.name}}</h5>
+                <br>
+                <br>
+             <button type="submit" ng-disabled="newEventForm.$invalid" ng-click="saveForm(event, newEventForm)" class="btn btn-primary">Save</button>
+             <button type="btn" class="btn btn-default" ng-click="cancel()">Cancel</button>
+            </form>
+            <br>
+            <table class="table">
+             <thead>
+                <tr>
+                    <th>Enterprise ID</th>
+                    <th>Planned</th>
+                    <th>Pending Review</th>
+                    <th>In Progress</th>
+                    <th>Exempted</th>
+                    <th>Completed</th>
+                </tr>
+            </thead>
+             <tbody>
+                <tr ng-repeat="review in event.reviews">
+                  <td>{{review.enterpriseID}}</td>
+                  <td>{{review.planned}}</td>
+                  <td>{{review.pendingReview}}</td>
+                  <td>{{review.inProgress}}</td>
+                  <td>{{review.exempted}}</td>
+                  <td>{{review.completed}}</td>
+                </tr>
+            </tbody>
+            </table>
+            <br>
+            <br>
+            <input type = "checkbox" ng-model = "enableDisableButton">Disable Button
+            <button ng-hide = "enableDisableButton">Click Me!</button>
+            <br>
+            <h5>Total count: {{clickCount}} </h5>
+            <button ng-click = "clickAction()">Click Me!</button>
+            </div>
+            <br>
+            <br>
+             <form name = "studentForm" novalidate>
+            <table border = "0">
+               <tr>
+                  <td>Enter first name:</td>
+                  <td><input name = "firstname" type = "text" ng-model = "firstName" required>
+                     <span style = "color:red" ng-show = "studentForm.firstname.$dirty && studentForm.firstname.$invalid">
+                        <span ng-show = "studentForm.firstname.$error.required">First Name is required.</span>
+                     </span>
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td>Enter last name: </td>
+                  <td><input name = "lastname"  type = "text" ng-model = "lastName" required>
+                     <span style = "color:red" ng-show = "studentForm.lastname.$dirty && studentForm.lastname.$invalid">
+                        <span ng-show = "studentForm.lastname.$error.required">Last Name is required.</span>
+                     </span>
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td>Email: </td><td><input name = "email" type = "email" ng-model = "email" length = "100" required>
+                     <span style = "color:red" ng-show = "studentForm.email.$dirty && studentForm.email.$invalid">
+                        <span ng-show = "studentForm.email.$error.required">Email is required.</span>
+                        <span ng-show = "studentForm.email.$error.email">Invalid email address.</span>
+                     </span>
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td>
+                     <button ng-click = "reset()">Reset</button>
+                  </td>
+                  <td>
+                     <button ng-disabled = "studentForm.firstname.$dirty &&
+                        studentForm.firstname.$invalid || studentForm.lastname.$dirty &&
+                        studentForm.lastname.$invalid || studentForm.email.$dirty &&
+                        studentForm.email.$invalid" ng-click="submit()">Submit</button>
+                  </td>
+               </tr>
+					
+            </table>
+         </form>
+         <br>
+         <br>
+        </div>

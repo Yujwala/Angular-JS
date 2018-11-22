@@ -1,0 +1,65 @@
+
+        <div class="container">
+            <a ng-href="#/home" style="cursor: pointer, color: green"  class="backlink"><span class="fa fa-angle-left"></span>&nbsp;Back</a>
+            <h1 style="text-align: center">New Request</h1>
+            <hr>
+            <form name="createRequest">
+            <div class="row">
+            <h2>Request Details</h2>    
+            </div>  
+            <div class="row">
+                <div class="span 3">
+                 <label style="cursor:default" for="projectName">Project Name</label>
+                    <input type="text" id="projectName" ng-model=project.name required placeholder="Enter Project Name"/>
+                    <label style="cursor:default">
+                    <span class="fa fa-exclamation-triangle">
+                        </span>
+                        Please enter a project.
+                    </label>
+                </div>
+                <div class="span 3">
+                 <label style="cursor:default" for="reviewDate">Review Date</label>
+                    <input type="text" id="reviewDate" ng-model=project.reviewdate required placeholder="Enter Project Name"/>
+                    <label style="cursor:default">
+                    <span class="fa fa-exclamation-triangle">
+                        </span>
+                        Please enter a review date.
+                    </label>
+                </div>
+                <div class="span 3">
+                 <label style="cursor:default" for="reviewType">Review Type</label>
+                    <input type="text" id="reviewType" ng-model=project.reviewtype  placeholder="Enter Project Name"/>
+                </div>
+                <div class="span 3">
+                 <label style="cursor:default" for="milestoneDate">Milestone Date</label>
+                    <input type="text" id="milestoneDate" ng-model=project.milestonedate placeholder="Enter Project Name"/>
+                </div>
+            </div>
+                <div class="row pull-right">
+                    <button type="submit" ng-disabled="createRequest.$invalid" ng-click="saveForm(project, createRequest)" class="btn btn-primary">Save</button>
+                    <button type="btn" class="btn btn-default" ng-click="cancel()">Cancel</button>
+                </div>
+                    </form>
+            <div>
+    
+        
+          <select ng-model="selection" ng-options="item for item in names">
+                <option value="">All</option>
+                <!-- <option value="Gate Review">Gate Review</option>
+                <option value="Green Job Analysis">Green Job Analysis</option>
+                <option value="Peer Review">Peer Review</option>
+                <option value="Start Up Review">Start Up Review</option> -->
+            </select>
+                {{selection}}
+                <ul class="thumbnails">
+                <li ng-repeat="review in project.reviews | filter:selection">
+                    <div>{{ review.name}}</div>
+                    <div>{{ review.reviewerName}}</div>
+                    <div>{{ review.reviewDate}}</div>
+                    </li>
+                </ul>
+            
+            
+            </div>
+            </div>
+         

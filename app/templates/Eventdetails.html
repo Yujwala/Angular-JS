@@ -1,0 +1,42 @@
+        <div>
+            <img ng-src="{{event.imageUrl}}" alt="{{event.name}}"/>
+            <h1> Event Details</h1> 
+            {{event.name}}<br/>
+            {{event.date | date:medium }}<br/>
+            {{event.time}}
+            <hr>
+            <h3>Sessions</h3>
+            <select ng-model="query">
+                <option selected value=""> All </option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+            <select ng-model="sortorder">
+                <option selected value="name"> Name </option>
+                <option value="-upVoteCount">Vote Count</option>
+            </select>
+            <ul class="thumbnails">
+             <li ng-repeat="session in event.sessions | orderBy:sortorder | filter: query">
+                <div class="row session">
+                 <div class="span0 well votingWidget">
+                    <div class="votingButton" ng-click="upVoteSession(session)">
+                     <i class="icon-chevron-up icon-white"></i>
+                     </div>
+                     <div class="badge badge-inverse">
+                       <div>{{session.upVoteCount}}</div>
+                     </div>
+                     <div class="votingButton" ng-click="downVoteSession(session)">
+                     <i class="icon-chevron-down"></i>
+                     </div>
+                    
+                    </div>
+                    <div class="well span9">
+                    <h4 class="well-title">{{session.name}}</h4>
+                        <p>{{session.level}}</p>
+                    </div>
+                 
+                 </div>
+                </li>
+            </ul>
+        </div>

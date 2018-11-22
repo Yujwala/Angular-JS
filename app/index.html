@@ -1,0 +1,72 @@
+<!Doctype HTML>
+<html ng-app="eventsApp">
+<head>
+  <title>Angular Demo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../css/app.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+  <link rel="stylesheet" type="text/css" href="js/ng-dialog/css/ngDialog.min.css">
+  <link rel="stylesheet" type="text/css" href="js/ng-dialog/css/ngDialog-theme-default.min.css">
+    </head>
+    <body>
+    <div class="container">
+        <div class="navbar">
+         <div class="navbar-inner">
+            <ul class="nav">
+             <li><a href="#/home">Home</a></li>
+             <li><a href="#/CreateEvent">Create Event</a></li>
+             <li><a href="#/NewRequest">New Request</a></li>
+             <li><a href="#/EditProfile">Edit Profile</a></li>
+             <li><a href="#/ModalExample">Modal Example</a></li>
+             <li><a href="#/DirectiveExample">Directive Example</a></li>
+             <li><a href="#/ServicesExample">Services Example</a></li>
+             <li><a href="#/Practice">Practice</a></li>          
+                </ul>
+            </div>
+        </div>
+      <ng-view></ng-view>
+        </div>
+    <script src="js/ng-dialog/js/ngDialog.min.js"></script> 
+    <script src="/lib/jquery.min.js"></script>
+    <script src="/lib/underscore-1.4.4.min.js"></script>
+    <script src="/lib/bootsrap.min.js"></script>
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/lib/angular/angular-route.min.js"></script>
+    <script src="/lib/angular/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/controllers/EventController.js"></script>
+    <script src="/js/services/EventData.js"></script>
+    <script src="/js/controllers/EditEventController.js"></script>
+    <script src="/js/controllers/NewRequestController.js"></script>
+    <script src="/js/controllers/EditProfileController.js"></script>
+    <script src="js/directives/gravatar.js"></script>
+    <script src="/js/services/GravatarUrlBuilder.js"></script>
+    <script src="/js/services/NewRequest.js"></script>
+    <script src="/js/services/modalService.js"></script>
+    <script src="/js/ng-dialog/js/ngDialog.js"></script>
+    <script src="js/controllers/DirectiveExampleController.js"></script>
+    <script src="js/directives/directiveExample.js"></script>
+    <script src="js/directives/removeFriend.js"></script>
+    <script src="js/directives/fontScale.js"></script>
+    <script src="js/directives/stateDisplay.js"></script>
+    <script src="js/directives/displayBox.js"></script>
+    <script src="js/directives/myQuestion.js"></script>
+    <script src="js/directives/tableContent.js"></script>
+    <script src="js/directives/swTabstrip.js"></script>
+    <script src="js/directives/swPane.js"></script>
+    <script src="js/services/JediService.js"></script>
+    <script src="js/directives/detailUsers.js"></script>
+    <script src="js/directives/masterUsers.js"></script>
+    <script src="js/directives/modalDirective.js"></script>
+    <script src="js/controllers/ModalExampleController.js"></script>
+    <script src="js/controllers/ServicesExampleController.js"></script>
+    <script src="js/services/books.js"></script>
+    <script src="js/services/calculate.js"></script>
+    <script src="js/services/users.js"></script>
+    <script src="js/controllers/practiceController.js"></script>
+    
+
+    </body>
+</html>

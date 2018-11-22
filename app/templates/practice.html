@@ -1,0 +1,58 @@
+<div class="toDoList">
+	<div class="panel panel-primary">
+		<div class="panel-heading" ng-click="active =! active">
+            <h3>To Do List</h3> 
+		</div>
+		<div class="panel-body" ng-hide="active">
+			<div class="row">
+			<div class="col-lg-10">
+			 <form name="MyForm" ng-submit="addTask()">
+			 <input type="text" class="form-control" name="taskItem" ng-model="title" placeholder="Enter the task" required>
+		    </form>
+		     </div>
+		     <div class="col-lg-2">
+		     	<button class="btn btn-primary" ng-click="addTask()">Add task</button>
+		     </div>
+		  
+		 	</div>
+		 	   <p style="color:red" ng-if="blank">Please Enter the Task</p>
+		     <p style="color: red" ng-if="invalid">Please Enter a valid Task</p>
+		     <div class="row">
+		     		<ul>
+		     			<li class="liHeight" ng-repeat="t in tasks" ng-class="{markAsC: main ==  $index, activeTask: second == $index}">{{t}}
+		     				<span class="pull-right"><button class="active btn btn-success" ng-click="second =  $index">Active</button>
+		     				<button class="active btn btn-danger" ng-disabled="awesome" ng-click="deleteTask(t)">Delete</button>
+		     				<button class="active btn btn-info" ng-click="main =  $index" >Mark as Complete</button>
+		     				<button class="active glyphicon glyphicon-pencil btn btn-warning" ng-click="editTask(t)"></button>
+		     			</span>
+		     			</li> 
+		    
+		     		</ul>
+		     	</div>
+
+
+
+		</div>
+	</div>
+</div>
+
+<div class="money-adding">
+	<div class="row">
+		<div style="background-color: aqua" class="col-lg-8 col-lg-offset-2">
+			<h4 style="text-align: center">Services</h4>
+			<ul>
+				<li class="serviceList" ng-repeat="service in services" ng-class="{Active:service.active}"ng-click="toggle(service)">
+					{{service.name}} <span style="float: right" >{{service.value}}</span>
+
+
+				</li>
+				<hr>
+				<li class="totalService">
+					Total: <span style="float:right">{{total}}
+
+				</li>
+			</ul>
+
+      
+		</div>
+	</div>
